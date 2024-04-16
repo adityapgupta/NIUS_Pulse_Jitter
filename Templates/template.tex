@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fancyvrb}
+\usepackage[skip=\medskipamount]{parskip}
+\usepackage{pdfpages}
+\usepackage{array}
+\usepackage{tabularray}
+\usepackage{longtable}
+\usepackage{tikz}
+\setlength{\parindent}{0pt}
+
+% \renewcommand*{\thesubsection}{\alph{subsection}}
+% \renewcommand*{\theenumi}{\alph{enumi}}
+
+\title{\vspace{-1.5cm}Title}
+\author{Aditya Gupta \\
+SR No: 22205}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\end{document}
+
+
+\vspace*{2mm} % Adjust vertical space manually, can be negative
+\mbox{text} % Prevents line break
+
+% Remove left margin in lists
+\begin{enumerate}[leftmargin = *]
+    \item 
+\end{enumerate}
+
+% Inserting equations
+\begin{align*}
+    a &= b \\[1ex]   % [1ex] adds extra vertical space, good for fractions
+    c &= d \ \ \  \text{Text} 
+\end{align*}
+
+% Inserting images
+\begin{center}
+    \includegraphics[width = _cm, height = _cm]{_.png}
+\end{center}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{_.jpeg}
+    \caption{}
+\end{figure}
+
+% Inserting pdf pages
+\includepdf[pages=-]{_.pdf}
+
+% Inserting code
+\begin{verbatim}
+    code
+\end{verbatim}
+
+%Aligning verbatim
+\begingroup
+\makeatletter
+\@totalleftmargin=0em
+    \begin{verbatim}
+        code
+    \end{verbatim}
+\endgroup
+
+% Inserting tables
+\begin{center}
+\begin{tblr}{colspec = {ccc}, hlines, vlines, row{1} = {font = \bfseries}}
+    Column 1 & Column 2 & Column 3 \\ 
+    text & text & text \\ 
+    text & text & text \\ 
+    text & text & text \\ 
+    text & text & text \\ 
+\end{tblr}
+\end{center}
+
+% Inserting long tables
+\begin{center}
+\DefTblrTemplate{contfoot-text}{normal}{} \SetTblrTemplate{contfoot-text}{normal}
+\DefTblrTemplate{conthead-text}{normal}{} \SetTblrTemplate{conthead-text}{normal}
+\DefTblrTemplate{capcont}{normal}{} \SetTblrTemplate{capcont}{normal}
+\DefTblrTemplate{caption}{normal}{} \SetTblrTemplate{caption}{normal}
+\begin{longtblr}{colspec = {|m{4.5cm}|m{3cm}|m{2.6cm}|m{2.2cm}|m{2cm}|m{1.2cm}|}, row{1} = {font=\bfseries}, hlines, vlines}    
+    Column 1 & Column 2 & Column 3 \\ 
+    text & text & text \\ 
+    text & text & text \\ 
+    text & text & text \\ 
+    text & text & text \\ 
+\end{longtblr}
+\end{center}
+
+% ALgorithmic code
+\begin{algorithm}[ht!]
+\renewcommand{\thealgorithm}{}
+\caption{}
+\begin{algorithmic}[1]
+    \Function{}{}
+    \EndFunction
+\end{algorithmic}
+\end{algorithm}
