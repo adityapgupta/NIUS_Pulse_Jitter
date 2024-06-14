@@ -13,7 +13,7 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ```
 
-Installing psrchive and related packages:
+Installing PSRCHIVE and related packages:
 ```
 conda config --add channels conda-forge
 conda create -n pulsar psrchive
